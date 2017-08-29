@@ -27,7 +27,7 @@ ids = [i.id() for i in it]
 roadLayer.setSelectedFeatures( ids )
 
 crr = timeit.default_timer()
-print (u"8차선 이상 필터링하여 저장 : {}ms".format(int((crr - pre)*1000)))
+print (u"8차선 이상 필터링 : {}ms".format(int((crr - pre)*1000)))
 pre = crr
 
 # 500 미터 버퍼  생성 후
@@ -42,7 +42,7 @@ feats = [ feat for feat in bufferLayer.getFeatures() ]
 geom_buffer = feats[0].geometry()
 
 crr = timeit.default_timer()
-print (u"버퍼 파일로 저장 : {}ms".format(int((crr - pre)*1000)))
+print (u"버퍼 파일 읽기 : {}ms".format(int((crr - pre)*1000)))
 pre = crr
 
 # 지하철역 불러
